@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Seminar - Flexbox</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="intro">
+          <section>
+            <h2><b>Flex</b>box</h2>
+            <p class="fragment">CSS Flexible Box Layout Module Level 1</p>
+          </section>
+          <section>
+            <h2> What we do on this seminar? </h2>
+            <ul>
+              <li class="fragment">Problem?</li>
+              <li class="fragment">Introduction flexbox</li>
+              <li class="fragment">Playground</li>
+              <li class="fragment">References</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="problem">
+          <section>
+            <h2> Problem? </h2>
+            <h4 class="fragment"> Old approach: <b>Float</b> </h4>
+          </section>
+          <section>
+            <h2> What we need? </h2>
+            <ul>
+              <li class="fragment">Alignment</li>
+              <li class="fragment">Direction</li>
+              <li class="fragment">Order</li>
+              <li class="fragment">Size</li>
+            </ul>
+          </section>
+          <section>
+            <h2><b> Flexbox </b></h2>
+            <p class="fragment">Flexbox is not a single property but a set of properties on the parent element and their children</p>
+          </section>
+        </section>
+
+        <section id="flexbox">
+          <section>
+            <h2> What we need to know about <b>Flexbox</b>? </h2>
+            <ul>
+              <li class="fragment">Enable flexbox behaviors</li>
+              <li class="fragment">Ordering and orientation</li>
+              <li class="fragment">Alignment</li>
+              <li class="fragment">Flexibility</li>
+              <li class="fragment">Shorthand</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Layout</h2>
+            <img style="background-color: #fff" src="https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/dbd951/flexbox-in-html5-an-overview/Images/flexbox.png" alt="" />
+          </section>
+          <section>
+            <h2>Enable flex</h2>
+            <pre class="fragment"><code class="hljs">
+.grid {
+  display: flex; //inline-flex
+}
+            </code></pre>
+            <div class="fragment" style="background: #fff">
+              <img src="https://internetingishard.com/html-and-css/flexbox/flex-container-and-flex-items-6234bb.png" alt="" />
+            </div>
+          </section>
+
+          <section>
+            <h4>Ordering & Orientation</h4>
+            <ul>
+              <li>Flex direction</li>
+              <li>Flex wrap</li>
+              <li>Item order</li>
+            </ul>
+            <pre class="fragment"><code class="hljs">
+.grid {
+  ...
+  flex-direction: row; //column, row-reverse, column-reverse
+  flex-wrap: nowrap; // wrap
+  ...
+}
+
+.grid_item {
+  order: 1;
+}
+            </code></pre>
+            <img class="fragment" style="background: #fff" src="https://internetingishard.com/html-and-css/flexbox/flex-justify-content-alignment-ea129c.png" alt="" />
+          </section>
+
+          <section>
+            <h4>Alignment</h4>
+            <ul>
+              <li>Justify content (main-axis)</li>
+              <li>Align items (cross-axis)</li>
+              <li>Align self (cross-axis)</li>
+              <li>Align content</li>
+            </ul>
+            <pre class="fragment"><code class="hljs">
+.grid {
+  ...
+  justify-content: flex-start; // flex-end, center, space-around, space-between
+  align-items: flex-start; // flex-end, center, base-line, stretch
+  ...
+}
+
+.grid_item {
+  align-self: flex-start; // flex-end, center. base-line, stretch
+}
+            </code></pre>
+            <img class="fragment" style="background: #fff" src="https://internetingishard.com/html-and-css/flexbox/flex-justify-content-alignment-ea129c.png" alt="" />
+          </section>
+
+          <section>
+            <h4>Flexibility</h4>
+            <ul>
+              <li>Flex grow</li>
+              <li>Flex shrink</li>
+              <li>Flex basis</li>
+              <li>Align content</li>
+            </ul>
+            <pre class="fragment"><code class="hljs">
+.grid_item {
+  ...
+  flex-grow: 0; // >= 0 are valid
+  flex-shrink: 0;
+  flex-basis: auto; // 30%, 50%
+  ...
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Auto <b>margin</b></h2>
+            <img src="https://snag.gy/Syj03H.jpg" alt="" />
+          </section>
+        </section>
+
+        <section id="playground">
+          <h2>Playground</h2>
+<p data-height="750" data-theme-id="0" data-slug-hash="OEWVMm" data-default-tab="result" data-user="mihnsen" data-embed-version="2" data-pen-title="Flexbox Properties Demonstration" class="codepen">See the Pen <a href="https://codepen.io/mihnsen/pen/OEWVMm/">Flexbox Properties Demonstration</a> by Minh Nguyen (<a href="https://codepen.io/mihnsen">@mihnsen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+        <section id="references">
+          <h2>References</h2>
+          <ul>
+            <li>
+              CSS Flexbox by <a href="https://www.w3.org/TR/css-flexbox-1/">W3C</a>
+            </li>
+            <li>
+              CSS Flexible Box Layout by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">MDN</a>
+            </li>
+            <li>
+              Flex cheatsheet by <a href="https://yoksel.github.io/flex-cheatsheet/">yoksel</a>
+            </li>
+            <li>
+              Flexbox by <a href="https://internetingishard.com/html-and-css/flexbox/">Interneting Is Hard</a>
+            </li>
+            <li>
+              Visual guide to css3 flexbox by <a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Dimitar Stojanov</a>
+            </li>
+            <li>
+              Flex Utilities by <a href="https://getbootstrap.com/docs/4.1/utilities/flex/">Bootstrap 4</a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="final-words">
+          <h2>Thanks!</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
