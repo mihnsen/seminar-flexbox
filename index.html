@@ -140,7 +140,6 @@
               <li>Flex grow</li>
               <li>Flex shrink</li>
               <li>Flex basis</li>
-              <li>Align content</li>
             </ul>
             <pre class="fragment"><code class="hljs">
 .grid_item {
@@ -154,9 +153,43 @@
           </section>
 
           <section>
+            <h4>Flex shorthand</h4>
+            <ul>
+              <li>flex</li>
+              <li>flex-flow</li>
+            </ul>
+            <pre class="fragment"><code class="hljs">
+.grid_item {
+  ...
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+  flex: 2;
+  flex: 10px;
+  flex: 2 2;
+  flex: 2 30px;
+  flex: 2 2 30px;
+  flex: auto; // = 1 1 auto;
+  flex: initial; // = 0 1 auto;
+  flex: none; // = 0 0 auto;
+
+  flex-flow: <'flex-direction'> || <'flex-wrap'>;
+  flex-flow: row;
+  flex-flow: wrap;
+  flex-flow: column-reverse wrap;
+  ...
+}
+            </code></pre>
+            <img class="fragment" src="https://snag.gy/ALyNFg.jpg" alt="" />
+          </section>
+
+          <section>
             <h2>Auto <b>margin</b></h2>
             <img src="https://snag.gy/Syj03H.jpg" alt="" />
           </section>
+        </section>
+
+        <section class="compatibility">
+          <h2>Browser compatibility</h2>
+          <img src="https://snag.gy/sTG4iM.jpg" alt="" />
         </section>
 
         <section id="playground">
